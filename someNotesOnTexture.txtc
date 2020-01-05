@@ -1,0 +1,14 @@
+gl.activeTexture(gl.TEXTURE1)
+gl,uniformli(gl. ......, 1) same number!!
+TEXTURE1 it is just a name of the saved memory space by webGL
+
+vec4( -0.5, 0.0,  0.5, 1.0 ),
+        vec4( -0.5,  1.0,  0.5, 1.0 ),
+        vec4(  0.5,  1.0,  0.5, 1.0 ),
+        vec4(  0.5, 0.0,  0.5, 1.0 ),
+        vec4( -0.5, 0.0, -0.5, 1.0 ),
+        vec4( -0.5,  1.0, -0.5, 1.0 ),
+        vec4(  0.5,  1.0, -0.5, 1.0 ),
+        vec4(  0.5, 0.0, -0.5, 1.0 )
+
+        spotlight= directional light but with limitation on what it luminates

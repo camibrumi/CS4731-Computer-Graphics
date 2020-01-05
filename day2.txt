@@ -1,0 +1,5 @@
+Notes on WebGL.
+
+Vertex shader, computes the
+
+canvas  tag: where create a drawing space

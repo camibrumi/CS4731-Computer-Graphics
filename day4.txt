@@ -1,0 +1,19 @@
+tranasformations on our triangles
+
+rotate, scale, translates
+
+
+translating: does not depend where the triangle is centered.
+scaling: it depends on the initial position (in order to do a correct scaling without deformation)
+multiplying by a negative scalar >> reflection
+
+xf = x0*cos(0) - y0*sin(0)
+
+        |
+        |
+        |
+--------------------
+        |
+        |
+        |
+IF SHAPE NOT CENTERD IN THE ORIGIN: we translate it to the origin, we rotate it, and we translate it back

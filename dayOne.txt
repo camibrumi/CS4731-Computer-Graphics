@@ -1,0 +1,46 @@
+Prof. Joshua Cuneo
+
+WebGL (OpenGL)
+JavaScript
+
+System Programming Concepts
+
+
+
+agurung@wpi.edu
+pgoel@wpi.edu
+
+WebGL Programming Guide
+Kouichi Matsuda, Rodger Lea
+WebGL Fundamentals (Free online)
+
+1st Project in WebGL
+unzip WebGL file on Canvas
+We just have to see the image when we open the HTML document
+
+NOTE: BEFORE FRIDAY
+
+Elements of 2D Graphics
+- Polylines (vector graphics) -- what we are going to do in this class
+- Raster images (bitmap graphics)
+
+- Polyline: vertices (corners) connected to straight lines
+- Attributes: line thickness, color, etc.
+
+Filled regions
+- filled region: shape filled with a color or pattern
+- e.g polygons
+
+Raster images
+(picture: 2D matrix of pixels)
+
+Graphics Processing Unit (GPU) good at linear algebra, matrix multiplication
+
+WebGL
+- Web-based implementation of OpenGL
+- Supported by majer web browser
+- no additional softwasre, compilation, etc, required
+
+https://webglfundamentals.org
+
+Pipeline Rendering

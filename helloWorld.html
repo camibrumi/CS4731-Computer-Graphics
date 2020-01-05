@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<script>
+function foo() {
+  document.getElementById("main heading").innerHTML = "This is the modified heading 1.";
+}
+</script>
+
+<script>
+function foo2() {
+  document.getElementById("main parragraph").innerHTML = "This is the modified parragraph 1.";
+}
+</script>
+</head>
+<body style="background-color:powderblue;">
+
+<h1 id="onmouseoverheading" onmouseover="change()" onmouseout="notChanged()">still not changed</h1>
+<script>
+function change() {
+  document.getElementById("onmouseoverheading").innerHTML="changed";
+}
+
+function notChanged() {
+  document.getElementById("onmouseoverheading").innerHTML="still not changed";
+}
+</script>
+
+<p id="carname">hello</p>
+<p id="car1">hello</p>
+<p id="car2">hello</p>
+
+<script>
+var car = {
+  type: "Fiat",
+  model: "500",
+  color: "white",
+  carName: function() {
+    return this.type + " " + this.model;
+  }
+}
+
+document.getElementById("carname").innerHTML = car.carName();
+document.getElementById("car1").innerHTML = typeof car.carName; // returns function
+document.getElementById("car2").innerHTML = typeof car.carName(); // return string
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h1 id="main heading" style="text-align:center;">This is heading 1</h1>
+
+  <button type="button" onClick="foo()">CHANGE MAIN HEADING</button> <!-- DO NOT FORGET THE () AFTER THE FUNCTION NAME! -->
+
+  <h2 style="font-size:60px">This is heading 2</h2>
+  <h3 style="color:green">This is heading 3</h3>
+  <p id="main parragraph" style="color:red;" title="This is the first parragraph.;">This is a paragraph.
+  <button type="button" onClick="foo2()">CHANGE MAIN PARRAGRAPH</button>
+  <p>This is another paragraph.</p>
+
+  <br>
+  <a href="https://www.w3schools.com">This is a link</a>
+  <br>
+
+  <a href="www.google.com">This is a link to google.</a>
+  <br>
+  <br>
+  <br>
+
+  <img src="W3Schools_logo.png" width="200" height="142" title="Click me and you will find out!" href="http://www.google.com"> <!--THE HREF DOES NOTHING WHE APPLYIED TO AN IMAGE-->
+  <br>
+  <img srt="holabola.jpg" alt="Hola hola">
+
+  <br>
+
+
+
+
+  <ul style="background-color:green;">
+      <li>milk</li>
+      <li>eggs</li>
+      <li>flour</li>
+      <li>tomatoes</li>
+  </ul>
+
+<hr>
+<hr>
+
+  <ol style="font-family:verdana;">
+      <li>milk</li>
+      <li>eggs</li>
+      <li style="font-family:courier;">flour</li>
+      <li>tomatoes</li>
+  </ol>
+
+</body>
+</html>
+
+<br>
+
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains         a lot of spaces
+in the source         code,
+but the        browser
+ignores it.
+</p>
+
+<br>
+<p>After this comes a line break <br> and now we are on the new line.</p>
+
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre> <!-- preformated text preserves spaces and line breaks. -->
+
+<script src="myScript.js"></script> <!-- I can write this script also after declaring the button and the last heading. I also can place this import in the head of the document, and the result is the same-->
+
+<h3 id="demo">Last Heading</h3>
+<button type="button" onClick="myFunction()">change last heading</button>
+
+<hr>
+
+<p>Now we are going to use document.write(), which is actually like a print in other programming languages.</p>
+<script>document.write("This is ")</script>
+<script>document.write(2 + 2)</script>
+<script>document.write("everybody")</script>
+
+<br>
+
+<button type="button" onClick="document.write(2)">Erase everything by mistake?</button>
+
+<script>
+function alert1() {
+  alert("Say hello to the camera!"); // we can launch an alert using both window.alert() and alert() only
+}
+</script>
+
+<button type="button" onClick="alert1()">Launch alert.</button>
+
+<p>The alert is automatically launched if the write it directly between the script tags</p>
+<script>
+//window.alert("Say huhu.")
+</script>
+
+<p>JAVA SCRIPT EVALUATES EXPRESSIONS FROM LEFT TO RIGHT!</p>
+
+<p id="holulu"></p>
+
+<script>
+
+var person = {
+  firstName : "John",
+  lastName  : "Doe",
+  age     : 50,
+  eyeColor  : "blue"
+};
+
+document.getElementById("holulu").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+
+var pers = {testkey : "testvalue", secondone : "secondtest"}
+document.getElementById("holulu").innerHTML = pers.testkey + pers.secondone;
+</script>
+
+<p id="test"></p>
+
+<script>
+var x = "hello";
+var y = 3;
+var z = 'a';
+var u;
+
+document.getElementById("test").innerHTML = typeof x + " " + typeof y + " " + typeof z + " " + typeof u;
+
+</script>
+
+<p>Objects can be emptied by setting the value to <b>null</b>.</p>
+
+<p id="demo2"></p>
+
+<script>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+person = null;
+document.getElementById("demo2").innerHTML = typeof person;
+</script>

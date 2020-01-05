@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Example File</title>
+
+	<script id="vshader" type="x-shader/x-vertex">
+	attribute vec4 vPosition;
+	attribute vec4 vColor;
+  uniform float vPointSize; // Uniforms are effectively global variables you set before you execute your shader program.
+	varying vec4 fColor; // Varyings are a way for a vertex shader to pass data
+                       // to a fragment shader. Depending on what is being
+                       // rendered, points, lines, or triangles, the values set
+                       // on a varying by a vertex shader will be interpolated
+                       // while executing the fragment shader.
+
+	void main() {
+    // gl_Position is a special variable a vertex shader
+    // is responsible for setting
+		gl_Position = vPosition;	// Point position
+  	gl_PointSize = 10.0;		// Point size. before was: gl_PointSize = 10.0; vPointSize
+		fColor = vColor;			// Pass point color to fragment shader
+  	}
+	</script>
+
+	<script id="fshader" type="x-shader/x-fragment">
+  // fragment shaders don't have a default precision so we need
+  // to pick one. mediump is a good default
+	precision mediump float; //if we do not put this we will have an error
+	varying vec4 fColor;
+
+	void main()
+	{
+		gl_FragColor = fColor;	// Point color
+  	}
+	</script>
+
+<!--The below stuff are imports-->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/initShaders.js"></script>
+    <script src="lib/MV.js"></script>
+
+    <script src="example.js"></script>
+
+  </head>
+
+  <body onload="main()">
+
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports the "canvas" tag.
+    </canvas>
+
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Example File</title>
+
+	<script id="vshader" type="x-shader/x-vertex">
+
+  // in verstex shader we don't use hard coded stuff
+
+  attribute vec4 vPosition; // attribute type that the value of vPosition will change
+  attribute vec4 vColor;
+  uniform float vPointSize;// will not go from one vertex to another in the same drawcall
+  varying vec4 fColor; // this will be preserved in the fragment shader
+  //attribute that this variable can change during the same draw call
+
+
+	void main() {
+    gl_Position = vPosition; //this is a built in variable
+    gl.PointSize = vPointSize; //draws a point at 0.0 of size 10. Use float, not integer! this is a built-in variable
+    fColor = vColor;
+
+    gl_Position = vec4(0.0, 0.0, 0.0, 1.0); //this is a built in variable
+    gl.PointSize = 10.0; //draws a point at 0.0 of size 10. Use float, not integer! this is a built-in variable
+    fColor = vec4(1.0, 0.0, 0.0, 1.0);
+
+  	}
+	</script>
+
+	<script id="fshader" type="x-shader/x-fragment">
+  varying vec4 fColor;
+	void main()
+	{
+    fColor = vColor; // I guess
+
+  	}
+	</script>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/initShaders.js"></script>
+    <script src="lib/MV.js"></script>
+
+    <script src="example.js"></script>
+
+  </head>
+
+  <body onload="main()">
+
+    <canvas id="webgl" width="400" height="400">
+    	Please use a browser that supports the "canvas" tag.
+    </canvas>
+
+  </body>
+</html>
